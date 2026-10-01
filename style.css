@@ -23,3 +23,23 @@ body {
 
     cursor: pointer;
 }
+.floatingNumber {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+
+    animation: floatUp 1s ease-out;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
