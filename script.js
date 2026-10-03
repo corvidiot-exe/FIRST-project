@@ -22,13 +22,13 @@ function pressButton() {
 }
 
  
-document.addEventListener("click", function() {
+document.addEventListener("click", function(event) {
     let burst = document.createElement("div");
 
     burst.id = "burst-12";
 
- burst.style.left = (mouseX) + "px";
-burst.style.top = (mouseY) + "px";
+  burst.style.left = (event.clientX - 40) + "px";
+    burst.style.top = (event.clientY - 40) + "px";
 
     document.body.appendChild(burst);
 
