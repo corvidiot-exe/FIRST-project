@@ -21,26 +21,18 @@ function pressButton() {
     });
 }
 
-    #burst-12 {
-      background: red;
-      width: 80px;
-      height: 80px;
-      position: relative;
-      text-align: center;
-    }
-    #burst-12:before,
-    #burst-12:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 80px;
-      width: 80px;
-      background: red;
-    }
-    #burst-12:before {
-      transform: rotate(30deg);
-    }
-    #burst-12:after {
-      transform: rotate(60deg);
-    }
+ 
+document.addEventListener("click", function() {
+    let burst = document.createElement("div");
+
+    burst.id = "burst-12";
+
+    burst.style.left = mouseX + "px";
+    burst.style.top = mouseY + "px";
+
+    document.body.appendChild(burst);
+
+    setTimeout(function() {
+        burst.remove();
+    }, 500);
+});
