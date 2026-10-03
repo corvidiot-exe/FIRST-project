@@ -27,8 +27,8 @@ document.addEventListener("click", function() {
 
     burst.id = "burst-12";
 
- burst.style.left = (mouseX - 40) + "px";
-burst.style.top = (mouseY - 40) + "px";
+ burst.style.left = (mouseX) + "px";
+burst.style.top = (mouseY) + "px";
 
     document.body.appendChild(burst);
 
